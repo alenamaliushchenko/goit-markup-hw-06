@@ -262,7 +262,6 @@ a:focus {
   letter-spacing: 0.02em;
   color: var(--secondary-color);
 }
-
 .container .order-service {
   margin-left: auto;
   margin-right: auto;
@@ -280,7 +279,6 @@ a:focus {
   background-size: cover;
   margin: 0 auto;
 }
-
 .button {
   display: block;
   margin: 0 auto;
@@ -314,7 +312,6 @@ a:focus {
   flex-wrap: wrap;
   gap: 36px;
 }
-
 .main-icon-box {
   display: none;
   visibility: hidden;
@@ -492,6 +489,7 @@ a:focus {
   display: flex;
   align-items: b;
 }
+
 /*Footer styles*/
 
 .footer {
@@ -500,14 +498,17 @@ a:focus {
 }
 .footer .container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: baseline;
 }
+
 .footer-logo {
-  max-width: 264px;
-  margin-right: 120px;
+  max-width: 288px;
 }
 .footer-logo-link {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -517,6 +518,26 @@ a:focus {
   color: var(--accent-color);
   text-decoration: none;
   margin-bottom: 17px;
+}
+.footer-socials {
+  min-width: 208px;
+  margin-top: 72px;
+  margin-bottom: 72px;
+}
+
+.footer-social-heading {
+  display: flex;
+  justify-content: center;
+  color: var(--focus-color);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 17px;
+}
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 .footer-logo-second-part {
   color: var(--passive-background-color);
@@ -555,19 +576,10 @@ a:focus {
 .footer-socials-icon {
   fill: currentColor;
 }
-.footer-social-heading {
-  color: var(--focus-color);
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  font-weight: 500;
-  font-size: 16px;
-  margin-bottom: 17px;
-}
 
-.footer-wrapper {
-  margin-left: auto;
-}
 .wrapper-caption {
+  display: flex;
+  justify-content: center;
   margin-bottom: 16px;
   color: var(--focus-color);
   font-size: 16px;
@@ -576,11 +588,11 @@ a:focus {
   line-height: 24px;
   letter-spacing: 0.32px;
 }
-.subscribe-form {
+/* .subscribe-form {
   display: flex;
   align-items: center;
   gap: 24px;
-}
+} */
 .subscribe-form-input {
   width: 264px;
   height: 40px;
@@ -605,8 +617,8 @@ a:focus {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
-  padding: 16px 24px;
+  /* gap: 16px; */
+  /* padding: 16px 24px; */
   min-width: 165px;
   height: 40px;
   cursor: pointer;
@@ -623,9 +635,50 @@ a:focus {
 }
 .subscribe-form-icon {
   margin-left: 16px;
-
   fill: #fff;
 }
+@media only screen and (min-width: 768px) {
+  .footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 108px;
+    margin-top: 72px;
+  }
+  .footer-logo {
+    max-width: 264px;
+    margin-right: 108px;
+  }
+  .footer-logo-link,
+  .footer-social-heading,
+  .wrapper-caption {
+    display: flex;
+    justify-content: start;
+  }
+  .subscribe-form {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .footer .container {
+    display: inline-flex;
+    align-items: baseline;
+    flex-wrap: nowrap;
+    margin-left: 156px;
+  }
+  .footer-wrapper {
+    margin-left: 80px;
+    margin-right: auto;
+  }
+  .subscribe-form {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+}
+
 /*Footer styles*/
 
 .main-icon-box {
